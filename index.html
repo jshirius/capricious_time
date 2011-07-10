@@ -5,14 +5,45 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 <meta http-equiv="Content-style-Type" content="text/css" /> 
 <meta http-equiv="imagetoolbar" content="no" /> 
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
 <link rel="stylesheet" href="./css/base.css" type="text/css" /> 
-<title>あなたのサイト名などお書きください</title> 
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/captify.js"></script> 
+<title>気まぐれな時をおくる</title> 
+
+      <script type="text/javascript">
+         $(function(){
+         $('img.captify').captify({
+            // all of these options are... optional
+            // ---
+            // speed of the mouseover effect
+            speedOver: 'fast',
+            // speed of the mouseout effect
+            speedOut: 'normal',
+            // how long to delay the hiding of the caption after mouseout (ms)
+            hideDelay: 500,   
+            // 'fade', 'slide', 'always-on'
+            animation: 'slide',      
+            // text/html to be placed at the beginning of every caption
+            prefix: '',      
+            // opacity of the caption on mouse over
+            opacity: '0.7',               
+            // the name of the CSS class to apply to the caption box
+            className: 'caption-bottom',   
+            // position of the caption (top or bottom)
+            position: 'bottom',
+            // caption span % of the image
+            spanWidth: '100%'
+         });
+         });
+      </script>
+
 </head> 
 <body> 
 <div id="top"> 
    <div id="header"> 
-      <h1><a href="index.html">SAMPLE TEMPLATE</a></h1> 
-	  <p>ここにサイトの説明などお書きください。不要な場合は削除してください。ここにサイトの説明などお書きください。不要な場合は削除してください。</p> 
+      <h1><a href="index.html">気まぐれな時をおくる</a></h1> 
+	  <p>本サイトは、ちっぽけカメコが、撮影した写真を掲載するサイトです。</p> 
   <div id="navi">
 	 ナビゲーションバー 
 	  </div>
@@ -22,8 +53,8 @@
 	  
    <div id="contents"> 
       <div id="main"> 
-         <h2>管理人より</h2> 
-         <h3>テンプレートについて</h3> 
+         <h2>トップ	</h2> 
+         <h3>写真ランダム表示</h3> 
          <p> 
             作っていくうちに、blogっぽい構造になってしまいました。<br /> 
          </p> 
@@ -32,55 +63,21 @@
             全体的な横幅は760px、メインコンテンツ部分560px、サブコンテンツ部分180pxです。<br /> 
             右側のサブコンテンツ部分はメニューやバナー等を配置することを想定しました。<br /> 
          </p> 
-         <h3>イメージ画像について</h3> 
-         <p> 
-            全ての画像はCoolWebWindow作です。煮るなり焼くなりお好きに。<br /> 
-            psdファイルも同梱しておりますので、ご自由にカスタマイズしてください。尚、Photoshop6で作成したので、それ以下のバージョンではファイルを開くことが出来ない可能性がありますがご了承ください。
-         </p> 
-         <h2>タグサンプル</h2> 
-         <h3>h3タグ</h3> 
-         <h4>h4タグ</h4> 
-         <h5>h5タグ</h5> 
-         <h6>h6タグ</h6> 
-         <p> 
-         <em>強調（em）</em> 
-         <strong>より強い強調（strong）</strong> 
-         <ins>追加（ins）</ins> 
-         <del>削除（del）</del> 
-         <br /> 
-         <a href="#">テキストアンカー</a> 
-         </p> 
-         <h3>リスト</h3> 
-         <h4>普通のリスト</h4> 
-         <ul> 
-            <li>普通のリスト1</li> 
-            <li>普通のリスト2</li> 
-            <li>普通のリスト3</li> 
-         </ul> 
-         <h4>番号付きリスト</h4> 
-         <ol> 
-            <li>番号付きリスト1</li> 
-            <li>番号付きリスト2</li> 
-            <li>番号付きリスト3<br />li要素の中はブロックレベルのタグを使用することが出来ます。例えば、&lt;p&gt;タグも記述することが出来ます。<br /></li> 
-         </ol> 
-         <h4>定義リスト</h4> 
-         <dl> 
-            <dt>定義リスト1</dt> 
-            <dd>定義した用語の説明</dd> 
-            <dt>定義リスト2</dt> 
-            <dd>定義した用語の説明</dd> 
-            <dt>定義リスト3</dt> 
-            <dd>定義した用語の説明<br />dd要素の中はブロックレベルのタグを使用することが出来ます。例えば、&lt;p&gt;タグも記述することが出来ます。しかし、dt要素にはインライン要素しか記述することができません。</dd> 
-         </dl> 
-         <h2>カスタマイズについて</h2> 
-         <p> 
-            カスタマイズはご自由になさってください。<br /> 
-            制限はありません。<br /> 
-         </p> 
-         <p> 
-            その他、不具合などございましたら<br /> 
-            <a href="http://www.coolwebwindow.com/" target="_blank">CoolWebWindow</a>にお知らせください。<br /> 
-         </p> 
+		 <h3>イメージ画像について</h3> 
+		 <table id="photo_thumbnail" width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+			 <img class="captify" src="photo/top/IMG_0713.jpg" alt="イラスト２" width=100 height=100>
+			 <tr>
+				 <td align="center"><img src="photo/top/IMG_0713.jpg" alt="イラスト２" width=100 height=100></td>
+				 <td align="center"><img src="photo/top/IMG_0713.jpg" alt="イラスト２" width=100 height=100></td>
+				 <td align="center"><img src="photo/top/IMG_0713.jpg" alt="イラスト２" width=100 height=100></td>
+			 </tr>
+			 <tr>
+				 <td align="center"><img src="photo/top/IMG_0713.jpg" alt="イラスト２" width=100 height=100></td>
+				 <td align="center"><img src="photo/top/IMG_0713.jpg" alt="イラスト２" width=100 height=100></td>
+				 <td align="center"><img src="photo/top/IMG_0713.jpg" alt="イラスト２" width=100 height=100></td>
+			 </tr>
+		 </table>
+		 
       </div><!-- /main --> 
       <div id="sub"> 
          <div class="section"> 
