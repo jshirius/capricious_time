@@ -43,7 +43,7 @@ div#top {
 
 div#header {
    width:760px;
-   height:300px;
+   height:200px;
    margin-bottom:5px;
    background:url(images/bg_head.gif) 0 0 no-repeat;
 }
@@ -226,7 +226,50 @@ address{
    font-size:0.63em;
    color:#333;
 }
+#photo_main {
+	position:relative;
+	height:300px;
+	border: 1px solid #ccc;
+　	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+　	vertical-align: middle;
+   
+}
 
+
+
+#div_photo_thumbnail{
+	position:relative;
+}
+
+#photo_main .captify{
+	position:relative;
+	margin:0px;
+	padding:0px;
+	height:200px;
+	width:200px;
+　	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+　	vertical-align: middle;
+}
+
+img.captify{
+	margin:0px;
+	padding:0px;
+	border:0px;
+	height:100px;
+	width:100px;
+}
+
+table tr td{
+	font-size:20px;
+	text-align:center;
+	height:110px;
+	width:110px;
+	vertical-align:middle;
+}
 
 /* caption styling */
          /* caption styling */
