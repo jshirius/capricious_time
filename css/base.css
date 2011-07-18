@@ -242,6 +242,14 @@ address{
 #div_photo_thumbnail{
 	position:relative;
 }
+#main_img{
+	position:relative;
+Å@	vertical-align: middle;
+	margin:0px;
+	padding:0px;
+	height:200px;
+	width:200px;
+}
 
 #photo_main .captify{
 	position:relative;

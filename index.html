@@ -9,10 +9,11 @@
 <link rel="stylesheet" href="./css/base.css" type="text/css" /> 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/captify.js"></script> 
+<script type="text/javascript" src="js/jquery.cross-slide.js"></script> 
 <title>気まぐれな時をおくる</title> 
 
-      <script type="text/javascript">
-         $(function(){
+<script type="text/javascript">//<![CDATA[
+	$(document).ready(function() {
          $('img.captify').captify({
             // all of these options are... optional
             // ---
@@ -34,10 +35,25 @@
             position: 'bottom',
             // caption span % of the image
             spanWidth: '100%'
-         });
-         });
-      </script>
-
+			});
+		$('#main_img_show').crossSlide({fade:2},
+			[
+			{src: 'photo/top/IMG_0713.jpg', from : '100% 100% 1x', to : '0% 0% 2x', time : 1},
+			{src: 'photo/top/IMG_0713.jpg', from : '80% 80% 2x', to : '70% 70% 1x', time : 1},
+			{src: 'photo/top/IMG_0713.jpg', from : '100% 50% 1x', to : '30% 50% 2x', time : 1}	
+			]
+		);
+       });
+      //]]></script>
+	  
+<style type="text/css"> 
+  #main_img_show {
+    border: 2px solid #555;
+    width: 550px;
+    height: 200px;
+  }
+  </style> 
+  
 </head> 
 <body> 
 <div id="top"> 
@@ -55,8 +71,8 @@
       <div id="main"> 
          <h2>トップ	</h2> 
 		 <h3>写真ランダム表示</h3> 
-		 <div id="photo_main" >
-			 <img class="captify" src="photo/top/IMG_0713.jpg" alt="イラスト２"  >
+		 <div id="photo_main" align="center">
+			 <div id="main_img_show">Loading...</div> 
 		 </div>
 
 	<div id ="div_photo_thumbnail">
